@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Sidebar from './Sidebar';
+import Dashboard from './Dashboard';
+import NotificationForm from './NotificationForm';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('dashboard');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container" style={{ display: 'flex' }}>
+      <Sidebar setCurrentPage={setCurrentPage} />
+      <div className="main-content" style={{ flex: 1, padding: '20px' }}>
+        {currentPage === 'dashboard' && <Dashboard />}
+        {currentPage === 'notifications' && <NotificationForm />}
+      </div>
     </div>
   );
 }
