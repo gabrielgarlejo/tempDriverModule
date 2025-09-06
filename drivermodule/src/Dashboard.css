@@ -1,0 +1,16 @@
+.dashboard-container {
+  margin-left: 240px;
+  padding: 32px;
+  background: #d3d3d3;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.dashboard-content {
+  display: flex;
+  gap: 32px;
+}

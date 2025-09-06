@@ -1,0 +1,33 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0; /* Start at the very top */
+  bottom: 0;
+  width: 240px;
+  background: #25472f;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  z-index: 200; /* Higher than header */
+}
+.sidebar-header {
+  font-size: 2rem;
+  padding: 20px 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.sidebar-item {
+  padding: 18px 16px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar-item.active,
+.sidebar-item:hover {
+  background: #3b5d3a;
+}
+.icon {
+  margin-right: 12px;
+  font-size: 1.3rem;
+}

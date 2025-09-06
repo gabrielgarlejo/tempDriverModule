@@ -1,0 +1,28 @@
+.tripdetails-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 24px;
+  min-width: 340px;
+  max-width: 400px;
+  font-size: 1.1rem;
+  color: #25472f;
+  font-family: "Montserrat", sans-serif;
+}
+.tripdetails-title {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.tripdetails-info {
+  margin-bottom: 16px;
+}
+.tripdetails-container.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  height: 100%;
+  min-height: 200px;
+}

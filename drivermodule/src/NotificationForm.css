@@ -1,0 +1,111 @@
+.notificationform-container {
+  margin-left: 240px;
+  padding: 32px;
+  background: #d3d3d3;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notificationform-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.notificationform-form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 32px;
+  min-width: 400px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.notificationform-form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.notificationform-form select,
+.notificationform-form input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #25472f;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  background: #f5f5f5;
+}
+.notificationform-form select.error,
+.notificationform-form input.error {
+  border-color: #d32f2f;
+}
+.mileage-inputs {
+  display: flex;
+  gap: 8px;
+}
+.mileage-inputs input {
+  width: 32px;
+  text-align: center;
+}
+.error-msg {
+  color: #d32f2f;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.send-btn {
+  background: #25472f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.send-btn:hover {
+  background: #3b5d3a;
+}
+.notificationform-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal-content {
+  background: #fdf5d6;
+  border: 3px solid #25472f;
+  border-radius: 8px;
+  padding: 48px 64px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 2rem;
+  color: #25472f;
+  cursor: pointer;
+}
+.modal-icon {
+  font-size: 4rem;
+  color: #25472f;
+  margin-bottom: 16px;
+}
+.modal-text {
+  font-size: 2rem;
+  color: #25472f;
+  font-weight: 600;
+}

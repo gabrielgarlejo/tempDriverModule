@@ -1,17 +1,37 @@
-import React, { useState } from 'react';
-import Sidebar from './Sidebar';
-import Dashboard from './Dashboard';
-import NotificationForm from './NotificationForm';
+import React, { useState } from "react";
+import Sidebar from "./Sidebar";
+import Dashboard from "./Dashboard";
+import NotificationForm from "./NotificationForm";
+import HeaderBar from "./HeaderBar";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('dashboard');
+  const [active, setActive] = useState("dashboard");
 
   return (
-    <div className="app-container" style={{ display: 'flex' }}>
-      <Sidebar setCurrentPage={setCurrentPage} />
-      <div className="main-content" style={{ flex: 1, padding: '20px' }}>
-        {currentPage === 'dashboard' && <Dashboard />}
-        {currentPage === 'notifications' && <NotificationForm />}
+    <div>
+      <HeaderBar />
+      <Sidebar active={active} onNavigate={setActive} />
+      <div
+        style={{
+          marginLeft: 240,
+          marginTop: 70,
+          padding: "32px",
+          minHeight: "calc(100vh - 70px)",
+          background: "#d3d3d3",
+        }}
+      >
+        {active === "dashboard" && <Dashboard />}
+        {active === "notifications" && <NotificationForm />}
+        {active === "logout" && (
+          <div
+            style={{
+              fontFamily: "Montserrat, sans-serif",
+              fontSize: "2rem",
+            }}
+          >
+            Logged out.
+          </div>
+        )}
       </div>
     </div>
   );

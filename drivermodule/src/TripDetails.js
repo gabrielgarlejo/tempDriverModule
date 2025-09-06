@@ -1,22 +1,27 @@
-import React from 'react';
+import React from "react";
+import "./TripDetails.css";
 
-function TripDetails({ trip }) {
-  return (
-    <div className="trip-details" style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '4px' }}>
-      <h3>Vehicle Information</h3>
-      <div style={{ marginBottom: '20px' }}>
-        <p>Plate : {trip.vehicle.plate}</p>
-        <p>Model : {trip.vehicle.model}</p>
+export default function TripDetails({ trip }) {
+  if (!trip) {
+    return (
+      <div className="tripdetails-container empty">
+        <span>Select a trip to view details</span>
       </div>
-
-      <h3>Customer Information</h3>
-      <div>
-        <p>Name : {trip.customer.name}</p>
-        <p>Contact : {trip.customer.contact}</p>
-        <p>Destination : {trip.customer.destination}</p>
+    );
+  }
+  return (
+    <div className="tripdetails-container">
+      <div className="tripdetails-title">Vehicle information</div>
+      <div className="tripdetails-info">
+        <div>Plate : {trip.plate}</div>
+        <div>Model : {trip.model}</div>
+      </div>
+      <div className="tripdetails-title">Customer information</div>
+      <div className="tripdetails-info">
+        <div>Name : {trip.customer}</div>
+        <div>Contact : {trip.contact}</div>
+        <div>Destination : {trip.destination}</div>
       </div>
     </div>
   );
 }
-
-export default TripDetails;

@@ -1,38 +1,25 @@
-import React from 'react';
+import React from "react";
+import "./Sidebar.css";
 
-function Sidebar({ setCurrentPage }) {
+export default function Sidebar({ active, onNavigate }) {
   return (
-    <div className="sidebar" style={{ 
-      width: '200px', 
-      backgroundColor: '#1B4332',
-      color: 'white',
-      padding: '20px',
-      minHeight: '100vh'
-    }}>
-      <div className="logo">JMTC</div>
-      <div 
-        className="menu-item" 
-        onClick={() => setCurrentPage('dashboard')}
-        style={{ padding: '10px', cursor: 'pointer' }}
+    <div className="sidebar">
+      <div className="sidebar-header">JMTC</div>
+      <div
+        className={`sidebar-item ${active === "dashboard" ? "active" : ""}`}
+        onClick={() => onNavigate("dashboard")}
       >
-        🏠 Dashboard
+        <span className="icon">&#x1F3E0;</span> Dashboard
       </div>
-      <div 
-        className="menu-item" 
-        onClick={() => setCurrentPage('notifications')}
-        style={{ padding: '10px', cursor: 'pointer' }}
+      <div
+        className={`sidebar-item ${active === "notifications" ? "active" : ""}`}
+        onClick={() => onNavigate("notifications")}
       >
-        🔔 Notifications
+        <span className="icon">&#x1F514;</span> Notifications
       </div>
-      <div 
-        className="menu-item" 
-        onClick={() => console.log('Logout clicked')}
-        style={{ padding: '10px', cursor: 'pointer' }}
-      >
-        🚪 Logout
+      <div className="sidebar-item" onClick={() => onNavigate("logout")}>
+        <span className="icon">&#x1F511;</span> Logout
       </div>
     </div>
   );
 }
-
-export default Sidebar;
