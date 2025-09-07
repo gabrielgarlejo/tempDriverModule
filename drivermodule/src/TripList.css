@@ -2,49 +2,40 @@
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 24px;
-  min-width: 400px;
-  max-width: 480px;
+  padding: 32px;
+  min-width: 480px;
+  max-width: 540px;
 }
+
 .triplist-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
-.triplist-filter {
-  font-size: 1rem;
-  padding: 6px 12px;
-  border-radius: 4px;
-  border: 1px solid #25472f;
-  background: #f5f5f5;
-}
+
 .triplist-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .triplist-table th,
 .triplist-table td {
-  padding: 12px 8px;
+  padding: 16px 10px;
   text-align: left;
-}
-.triplist-table tr {
-  cursor: pointer;
-  transition: background 0.2s;
 }
 .triplist-table tr.selected,
 .triplist-table tr:hover {
   background: #e6f2e6;
 }
 .status-badge {
-  padding: 6px 16px;
+  padding: 8px 20px;
   border-radius: 16px;
   color: #fff;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   display: inline-block;
 }
 .status-badge.upcoming {
@@ -55,4 +46,11 @@
 }
 .status-badge.completed {
   background: #2ecc71;
+}
+.triplist-table th {
+  background: #25472f;
+  color: #e6e6e6;
+  font-weight: 500;
+  border: none;
+  font-size: 1.1rem;
 }

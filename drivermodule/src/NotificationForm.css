@@ -1,5 +1,5 @@
 .notificationform-container {
-  margin-left: 240px;
+  margin-left: 5px;
   padding: 32px;
   background: #d3d3d3;
   min-height: 100vh;
@@ -71,21 +71,23 @@
 }
 .notificationform-modal {
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
+  top: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 100;
 }
 .modal-content {
+  margin-top: 180px; /* Adjust this value to match the form's vertical position */
+  margin-left: 240px; /* Adjust this value to match the form's vertical position */
   background: #fdf5d6;
   border: 3px solid #25472f;
   border-radius: 8px;
-  padding: 48px 64px;
+  padding: 64px 120px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -100,12 +102,13 @@
   cursor: pointer;
 }
 .modal-icon {
-  font-size: 4rem;
+  font-size: 6rem;
   color: #25472f;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
+
 .modal-text {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #25472f;
   font-weight: 600;
 }
